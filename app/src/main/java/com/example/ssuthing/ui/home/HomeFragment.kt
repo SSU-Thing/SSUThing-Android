@@ -1,11 +1,17 @@
 package com.example.ssuthing.ui.home
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageButton
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentTransaction
 import com.example.ssuthing.R
+import com.example.ssuthing.ui.MainActivity
+import com.example.ssuthing.ui.mylist.MylistFragment
+
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -35,7 +41,12 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home, container, false)
+        val view: View = inflater.inflate(R.layout.fragment_home, container, false)
+        val btn_patrol = view.findViewById<ImageButton>(R.id.btn_patrol)
+        btn_patrol.setOnClickListener(View.OnClickListener {
+            (activity as MainActivity).replaceFragment(PatrolPageFragment())
+        })
+        return view
     }
 
     companion object {

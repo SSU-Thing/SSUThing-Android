@@ -2,6 +2,7 @@ package com.example.ssuthing.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.fragment.app.Fragment
 import com.example.ssuthing.R
 import com.example.ssuthing.databinding.ActivityMainBinding
 import com.example.ssuthing.ui.home.HomeFragment
@@ -47,5 +48,9 @@ class MainActivity : AppCompatActivity() {
         //selectedItemId=R.id.item_fragment1
 
         bottomNavBar.itemIconTintList = null
+    }
+
+    fun replaceFragment(fragment: Fragment) {
+        supportFragmentManager.beginTransaction().replace(R.id.fl_container, fragment).addToBackStack(null).commit()
     }
 }
