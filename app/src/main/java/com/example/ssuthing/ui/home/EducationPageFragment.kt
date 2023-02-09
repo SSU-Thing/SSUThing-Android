@@ -1,14 +1,11 @@
 package com.example.ssuthing.ui.home
 
 import android.os.Bundle
+import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageButton
-import androidx.fragment.app.Fragment
 import com.example.ssuthing.R
-import com.example.ssuthing.ui.MainActivity
-
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -17,10 +14,10 @@ private const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
- * Use the [HomeFragment.newInstance] factory method to
+ * Use the [EducationPageFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class HomeFragment : Fragment() {
+class EducationPageFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -38,24 +35,7 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val view: View = inflater.inflate(R.layout.fragment_home, container, false)
-        val btn_patrol = view.findViewById<ImageButton>(R.id.btn_patrol)
-        val btn_education = view.findViewById<ImageButton>(R.id.btn_education)
-        val btn_leisure = view.findViewById<ImageButton>(R.id.btn_leisure)
-        val btn_event = view.findViewById<ImageButton>(R.id.btn_event)
-        btn_patrol.setOnClickListener(View.OnClickListener {
-            (activity as MainActivity).replaceFragment(PatrolPageFragment())
-        })
-        btn_education.setOnClickListener(View.OnClickListener {
-            (activity as MainActivity).replaceFragment(EducationPageFragment())
-        })
-        btn_leisure.setOnClickListener(View.OnClickListener {
-            (activity as MainActivity).replaceFragment(LeisurePageFragment())
-        })
-        btn_event.setOnClickListener(View.OnClickListener {
-            (activity as MainActivity).replaceFragment(EventPageFragment())
-        })
-        return view
+        return inflater.inflate(R.layout.fragment_education_page, container, false)
     }
 
     companion object {
@@ -65,12 +45,12 @@ class HomeFragment : Fragment() {
          *
          * @param param1 Parameter 1.
          * @param param2 Parameter 2.
-         * @return A new instance of fragment HomeFragment.
+         * @return A new instance of fragment EducationPageFragment.
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            HomeFragment().apply {
+            EducationPageFragment().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)
