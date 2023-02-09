@@ -10,6 +10,13 @@ import com.example.ssuthing.data.ItemListData
 
 class PatrolPageAdapter(val itemList: ArrayList<ItemListData>) :
     RecyclerView.Adapter<PatrolPageAdapter.BoardViewHolder>() {
+
+    interface OnItemClickListener{
+        fun onItemClick(position: Int){}
+    }
+
+    var itemClickListener: OnItemClickListener? = null
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BoardViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_list, parent, false)
         return BoardViewHolder(view)
@@ -29,5 +36,11 @@ class PatrolPageAdapter(val itemList: ArrayList<ItemListData>) :
         val tv_list_number = itemView.findViewById<TextView>(R.id.list_number)
         val tv_name = itemView.findViewById<TextView>(R.id.item_name)
         val tv_number = itemView.findViewById<TextView>(R.id.item_number)
+
+        init {
+            itemView.setOnClickListener{
+                itemClickListener?.onItemClick(adapterPosition)
+            }
+        }
     }
 }
