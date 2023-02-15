@@ -11,7 +11,7 @@ import android.widget.TextView
 import androidx.appcompat.widget.AppCompatButton
 import androidx.fragment.app.setFragmentResultListener
 import com.example.ssuthing.R
-import com.example.ssuthing.ui.homea.BottomSheetCalendarFragment
+import com.example.ssuthing.ui.home.BottomSheetCalendarFragment
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 
 class ReserveBottomSheetFragment : BottomSheetDialogFragment() {
@@ -29,7 +29,6 @@ class ReserveBottomSheetFragment : BottomSheetDialogFragment() {
         btn_day_select.setOnClickListener( View.OnClickListener() {
             val bottomSheet = BottomSheetCalendarFragment()
             activity?.let { bottomSheet.show(it.supportFragmentManager, bottomSheet.tag) }
-//            Log.d("hi","hi")
         })
         return view
     }
