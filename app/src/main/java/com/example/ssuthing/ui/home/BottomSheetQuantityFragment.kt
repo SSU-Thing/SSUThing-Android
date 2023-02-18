@@ -38,29 +38,25 @@ class BottomSheetQuantityFragment : BottomSheetDialogFragment() {
         } )
 
         btn_quantity_select.setOnClickListener(View.OnClickListener(){
-//            if(quantity != 0){
-//                btn_quantity_select.isEnabled = true
-//                btn_quantity_select.setBackgroundColor(Color.parseColor("#68CDC1"))
-//                dismiss()
-//            } else{
-//                btn_quantity_select.isEnabled = false
-//            }
-            if(quantity != 0){
-                dismiss()
-            }
+            dismiss()
         } )
 
         ib_minus.setOnClickListener(View.OnClickListener(){
             if(quantity > 0){
                 quantity -= 1
                 tv_quantity.text = quantity.toString()
+                btn_quantity_select.isEnabled = quantity != 0
             }
         } )
 
         ib_plus.setOnClickListener(View.OnClickListener(){
             quantity += 1
             tv_quantity.text = quantity.toString()
+            btn_quantity_select.isEnabled = quantity != 0
         } )
+
+
+
 
         return view
     }
