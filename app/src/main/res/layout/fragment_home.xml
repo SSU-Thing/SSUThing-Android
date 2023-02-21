@@ -1,248 +1,253 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#F7F9F6"
-    android:paddingLeft="30dp"
-    android:paddingTop="30dp"
-    android:paddingRight="30dp"
-    tools:context=".ui.home.HomeFragment">
+    android:layout_height="match_parent">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:id="@+id/home_welcome_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="김동현님\nSSUThing에 오신걸 환영해요!"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageButton
-        android:id="@+id/home_bell_btn"
-        android:layout_width="25dp"
-        android:layout_height="27.6dp"
-        android:layout_gravity="end"
-        android:contentDescription="@null"
-        android:src="@drawable/ic_bell"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <LinearLayout
-        android:id="@+id/home_row1"
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:gravity="center"
-        app:layout_constraintTop_toBottomOf="@+id/home_welcome_text">
+        android:layout_height="match_parent"
+        android:background="#F7F9F6"
+        android:paddingLeft="30dp"
+        android:paddingTop="30dp"
+        android:paddingRight="30dp"
+        android:paddingBottom="30dp"
+        tools:context=".ui.home.HomeFragment">
 
-        <!--        <android.widget.Button-->
-        <!--            android:id="@+id/patrol_btn"-->
-        <!--            android:layout_width="157.5dp"-->
-        <!--            android:layout_height="157.5dp"-->
-        <!--            android:layout_marginRight="10dp"-->
-        <!--            android:background="@drawable/home_category_background"-->
-        <!--            android:drawableTop="@drawable/ic_siren"-->
-        <!--            android:paddingTop="35dp"-->
-        <!--            android:text="순찰용품"-->
-        <!--            android:textColor="@color/black"-->
-        <!--            android:textStyle="bold" />-->
-
-        <!--        <android.widget.Button-->
-        <!--            android:id="@+id/education_btn"-->
-        <!--            android:layout_width="157.5dp"-->
-        <!--            android:layout_height="157.5dp"-->
-        <!--            android:layout_marginLeft="10dp"-->
-        <!--            android:background="@drawable/home_category_background"-->
-        <!--            android:drawableTop="@drawable/ic_books"-->
-        <!--            android:paddingTop="35dp"-->
-        <!--            android:text="생활/교육물품"-->
-        <!--            android:textColor="@color/black"-->
-        <!--            android:textStyle="bold" />-->
-        <ImageButton
-            android:id="@+id/btn_patrol"
-            android:layout_width="157.5dp"
-            android:layout_height="157.5dp"
-            android:layout_weight="1"
-            android:background="#F7F9F6"
-            android:contentDescription="@null"
-            android:scaleType="fitCenter"
-            android:src="@drawable/ic_patrol_btn" />
-
-        <ImageButton
-            android:id="@+id/btn_education"
-            android:layout_width="157.5dp"
-            android:layout_height="157.5dp"
-            android:layout_weight="1"
-            android:background="#F7F9F6"
-            android:contentDescription="@null"
-            android:scaleType="fitCenter"
-            android:src="@drawable/ic_education_btn" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/home_row2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:gravity="center"
-        app:layout_constraintTop_toBottomOf="@+id/home_row1">
-
-        <!--        <android.widget.Button-->
-        <!--            android:id="@+id/leisure_btn"-->
-        <!--            android:layout_width="157.5dp"-->
-        <!--            android:layout_height="157.5dp"-->
-        <!--            android:layout_marginRight="10dp"-->
-        <!--            android:background="@drawable/home_category_background"-->
-        <!--            android:drawableTop="@drawable/ic_joystick"-->
-        <!--            android:paddingTop="35dp"-->
-        <!--            android:text="여가물품"-->
-        <!--            android:textColor="@color/black"-->
-        <!--            android:textStyle="bold" />-->
-
-        <!--        <android.widget.Button-->
-        <!--            android:id="@+id/event_btn"-->
-        <!--            android:layout_width="157.5dp"-->
-        <!--            android:layout_height="157.5dp"-->
-        <!--            android:layout_marginLeft="10dp"-->
-        <!--            android:background="@drawable/home_category_background"-->
-        <!--            android:drawableTop="@drawable/ic_mic"-->
-        <!--            android:paddingTop="35dp"-->
-        <!--            android:text="행사물품"-->
-        <!--            android:textColor="@color/black"-->
-        <!--            android:textStyle="bold" />-->
-        <ImageButton
-            android:id="@+id/btn_leisure"
-            android:layout_width="157.5dp"
-            android:layout_height="157.5dp"
-            android:layout_weight="1"
-            android:background="#F7F9F6"
-            android:contentDescription="@null"
-            android:scaleType="fitCenter"
-            android:src="@drawable/ic_leisure_btn" />
-
-        <ImageButton
-            android:id="@+id/btn_event"
-            android:layout_width="157.5dp"
-            android:layout_height="157.5dp"
-            android:layout_weight="1"
-            android:background="#F7F9F6"
-            android:contentDescription="@null"
-            android:scaleType="fitCenter"
-            android:src="@drawable/ic_event_btn" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="335dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/home_list_background"
-        android:orientation="vertical"
-        android:padding="15dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/home_row2">
-
+        <!-- TODO: Update blank fragment layout -->
         <TextView
+            android:id="@+id/home_welcome_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="대여목록"
+            android:text="김동현님\nSSUThing에 오신걸 환영해요!"
             android:textColor="@color/black"
-            android:textSize="15sp"
-            android:textStyle="bold" />
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/home_bell_btn"
+            android:layout_width="25dp"
+            android:layout_height="27.6dp"
+            android:layout_gravity="end"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_bell"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <LinearLayout
+            android:id="@+id/home_row1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp">
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@+id/home_welcome_text">
 
+            <!--        <android.widget.Button-->
+            <!--            android:id="@+id/patrol_btn"-->
+            <!--            android:layout_width="157.5dp"-->
+            <!--            android:layout_height="157.5dp"-->
+            <!--            android:layout_marginRight="10dp"-->
+            <!--            android:background="@drawable/home_category_background"-->
+            <!--            android:drawableTop="@drawable/ic_siren"-->
+            <!--            android:paddingTop="35dp"-->
+            <!--            android:text="순찰용품"-->
+            <!--            android:textColor="@color/black"-->
+            <!--            android:textStyle="bold" />-->
+
+            <!--        <android.widget.Button-->
+            <!--            android:id="@+id/education_btn"-->
+            <!--            android:layout_width="157.5dp"-->
+            <!--            android:layout_height="157.5dp"-->
+            <!--            android:layout_marginLeft="10dp"-->
+            <!--            android:background="@drawable/home_category_background"-->
+            <!--            android:drawableTop="@drawable/ic_books"-->
+            <!--            android:paddingTop="35dp"-->
+            <!--            android:text="생활/교육물품"-->
+            <!--            android:textColor="@color/black"-->
+            <!--            android:textStyle="bold" />-->
+            <ImageButton
+                android:id="@+id/btn_patrol"
+                android:layout_width="157.5dp"
+                android:layout_height="157.5dp"
+                android:layout_weight="1"
+                android:background="#F7F9F6"
+                android:contentDescription="@null"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_patrol_btn" />
+
+            <ImageButton
+                android:id="@+id/btn_education"
+                android:layout_width="157.5dp"
+                android:layout_height="157.5dp"
+                android:layout_weight="1"
+                android:background="#F7F9F6"
+                android:contentDescription="@null"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_education_btn" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/home_row2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@+id/home_row1">
+
+            <!--        <android.widget.Button-->
+            <!--            android:id="@+id/leisure_btn"-->
+            <!--            android:layout_width="157.5dp"-->
+            <!--            android:layout_height="157.5dp"-->
+            <!--            android:layout_marginRight="10dp"-->
+            <!--            android:background="@drawable/home_category_background"-->
+            <!--            android:drawableTop="@drawable/ic_joystick"-->
+            <!--            android:paddingTop="35dp"-->
+            <!--            android:text="여가물품"-->
+            <!--            android:textColor="@color/black"-->
+            <!--            android:textStyle="bold" />-->
+
+            <!--        <android.widget.Button-->
+            <!--            android:id="@+id/event_btn"-->
+            <!--            android:layout_width="157.5dp"-->
+            <!--            android:layout_height="157.5dp"-->
+            <!--            android:layout_marginLeft="10dp"-->
+            <!--            android:background="@drawable/home_category_background"-->
+            <!--            android:drawableTop="@drawable/ic_mic"-->
+            <!--            android:paddingTop="35dp"-->
+            <!--            android:text="행사물품"-->
+            <!--            android:textColor="@color/black"-->
+            <!--            android:textStyle="bold" />-->
+            <ImageButton
+                android:id="@+id/btn_leisure"
+                android:layout_width="157.5dp"
+                android:layout_height="157.5dp"
+                android:layout_weight="1"
+                android:background="#F7F9F6"
+                android:contentDescription="@null"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_leisure_btn" />
+
+            <ImageButton
+                android:id="@+id/btn_event"
+                android:layout_width="157.5dp"
+                android:layout_height="157.5dp"
+                android:layout_weight="1"
+                android:background="#F7F9F6"
+                android:contentDescription="@null"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_event_btn" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/home_list_background"
+            android:orientation="vertical"
+            android:padding="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/home_row2">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="대여목록"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold" />
 
             <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:orientation="vertical">
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp">
 
-                <ImageView
+
+                <LinearLayout
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_refresh" />
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
 
-                <TextView
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_refresh" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5개"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="대여예약"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+                <LinearLayout
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="5개"
-                    android:textColor="@color/black"
-                    android:textSize="15sp" />
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
 
-                <TextView
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_check" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5개"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="대여중"
+                        android:textSize="10sp" />
+                </LinearLayout>
+
+                <LinearLayout
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="대여예약"
-                    android:textSize="10sp" />
-            </LinearLayout>
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:orientation="vertical">
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_clock" />
 
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_check" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5개"
+                        android:textColor="@color/black"
+                        android:textSize="15sp" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="5개"
-                    android:textColor="@color/black"
-                    android:textSize="15sp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="대여 완료"
+                        android:textSize="10sp" />
+                </LinearLayout>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="대여중"
-                    android:textSize="10sp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_clock" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="5개"
-                    android:textColor="@color/black"
-                    android:textSize="15sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="대여 완료"
-                    android:textSize="10sp" />
             </LinearLayout>
 
         </LinearLayout>
 
-    </LinearLayout>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
